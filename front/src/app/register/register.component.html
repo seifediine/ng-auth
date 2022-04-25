@@ -1,0 +1,67 @@
+<div class="row mt-4">
+  <div class="col-md-6 mx-auto">
+    <div class="card rounded-2">
+      <div class="card-header">
+        <h3 class="mb-0">Register</h3>
+      </div>
+      <div class="card-body">
+        <form class="form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              class="form-control rounded-2 required"
+              placeholder="choose a username"
+              name="username"
+              [(ngModel)]="username"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              class="form-control rounded-2 required"
+              placeholder="Enter your email"
+              name="email"
+              [(ngModel)]="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control rounded-2 required"
+              placeholder="choose a password"
+              name="password"
+              [(ngModel)]="password"
+            />
+          </div>
+          <div class="dropdown mt-2">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenu"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Choose a Role
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item">ROLE_USER</a></li>
+              <li><a class="dropdown-item">ROLE_SUPERUSER</a></li>
+              <li><a class="dropdown-item">ROLE_ADMIN</a></li>
+              <li><a class="dropdown-item">ROLE_NEW</a></li>
+            </ul>
+          </div>
+          <button
+            (click)="registerUser()"
+            type="button"
+            class="btn btn-primary float-right mt-2"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
